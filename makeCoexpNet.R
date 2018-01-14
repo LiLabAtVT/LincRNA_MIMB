@@ -1,7 +1,7 @@
 ########################################################################################################################
 # By Alex Qi Song
 # 01/12/18
-# usage: Rscript <lincRNA_FPKM_file> <protein_coding_FPKM_file> <number_of_cluster> <output_edgelist_file>
+# usage: Rscript makeCoexpNet.R <lincRNA_FPKM_file> <protein_coding_FPKM_file> <number_of_cluster> <output_edgelist_file>
 #######################################################################################################################
 
 # Process commandline arguments
