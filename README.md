@@ -19,7 +19,8 @@ Download the two python scripts (myGTF.py and findNonCoding.py) from the [github
 1. a GTF format file containing annotations for genes of interest
 2. BED format file that stores annotations for protein-coding genes
 3. BED format file that stores annotations for transposable elements
-4. FASTA format file for assembled chromosome sequences. 
+4. FASTA format file for assembled chromosome sequences.
+
 findNonCoding.py will ignore any transcript ID with the format of “ATXGXXXXX” and take other transcripts to check if they are the non-coding transcripts. The output file of findNonCoding.py is a list of identified non-coding gene IDs. Gene is considered as non-coding gene when all isoforms of that gene are non-coding transcripts. The non-coding transcripts are selected from the input GTF file using the four criteria:
 1. Mature transcript length > 200 bps (including UTRs and exons, excluding introns).
 2. Longest open reading frame does not encode more than 100 amino acids.
