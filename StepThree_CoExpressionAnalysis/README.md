@@ -1,8 +1,8 @@
-## Step 3. Co-expression analysis
+# Step 3. Co-expression analysis
 This is the third step in this analysis, we will use expression data from RNA-seq experiments for both coding and non-coding RNA to perform co-expression analysis.
-### Download R script
+## Download R script
 The R script can be downloaded from [github repository](https://github.com/LiLabAtVT/LincRNA_MIMB). No required packages need to be installed to run the script.
-### Run R script
+## Run R script
 makeCoexpNet.R needs two input files: 
 1. A FPKM file containing the expression level of lncRNAs
 2. a FPKM file containing the expression level of protein-coding genes.
