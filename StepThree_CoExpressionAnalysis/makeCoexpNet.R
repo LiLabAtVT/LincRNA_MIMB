@@ -26,14 +26,12 @@ clust <- kmeans(combFPKM,k,iter.max = 30)
 cat("Done\n")
 
 # Find the cluster with most balanced number of lincRNA and protein coding genes
-cat("Performing the correlation test for most balanced cluster...\n")
-minDiff = 0.5;mostBalancedClust = NA
+cat("Performing the correlation test for selected cluster...\n")
 for(clustID in unique(clust$cluster)){
   clustGenes <- names(clust$cluster[clust$cluster == clustID])
-  Diff = abs(0.5 - length(grep("^AT.*",clustGenes))/length(clustGenes))
-  if(Diff<minDiff){
-    minDiff = Diff
-    mostBalancedClust = clustID
+  ratio = length(grep("^AT.*",clustGenes))/length(clustGenes)
+  if(ratio > 0 && ratio < 1 && length(clustGenes) <= 100){
+    break
   }
 }
 
