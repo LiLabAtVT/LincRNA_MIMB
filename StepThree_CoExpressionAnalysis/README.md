@@ -12,7 +12,7 @@ makeCoexpNet.R will process the input files and construct co-expression network 
 1. Remove those having expression < 0.05 across all columns (conditions) in lncRNA FPKM file.
 2. For protein-coding gene FPKM file, calculate variance of each gene, keep the top 5000 genes with greatest variance.
 3. Perform K-means clustering using filtered data set of lncRNAs and protein-coding genes, number of cluster is specified by command line argument. 
-4. Find the cluster with most balanced number of lncRNA and protein-coding genes. Calculate Pearson Correlation Coefficient (PCC) for each gene pair, and p values for the PCC using Student’s t-distribution. Select gene pairs with p values < 0.05. An edge list of these gene pairs will then be generated and saved into the output file.
+4. Find one cluster with at least one lncRNA and one protein-coding gene with total number of nodes < 100. Calculate Pearson Correlation Coefficient (PCC) for each gene pair, and p values for the PCC using Student’s t-distribution. Select gene pairs with p values < 0.05. An edge list of these gene pairs will then be generated and saved into the output file.
 Below is an example of running the Rscript:  
 ```shell
 $ Rscript makeCoexpNet.R AllLincAveFPKM.v4.1.csv \
