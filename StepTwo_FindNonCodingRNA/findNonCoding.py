@@ -127,7 +127,7 @@ def orfLen(seq):
     startCodon = Seq("ATG")
     stopCodon = set([Seq("TAG"),Seq("TAA"),Seq("TGA")])
     startPos = endPos = -1
-    for i in range(len(seq)/3):
+    for i in range(len(seq)//3):
         if seq[3*i:3*i+3] == startCodon:
             startPos = 3*i
         if seq[3*i:3*i+3] in stopCodon:
